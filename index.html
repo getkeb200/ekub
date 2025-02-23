@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="noindex,nofollow" />
+    <script src="https://telegram.org/js/telegram-web-app.js?2"></script>
+    <script>
+        function setThemeClass() {
+            document.documentElement.className = Telegram.WebApp.colorScheme;
+        }
+
+        Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+        setThemeClass();
+
+    </script>
+
+    <title></title>
+
+<body class="" style="visibility: true;">
+
+<section id="top_sect" class="second">
+    <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello, World!»</button>
+    <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
+    <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
+    <button onclick="DemoApp.expand();">Expand Webview</button>
+    <button onclick="DemoApp.toggleBackButton(this);">Show Back Button</button>
+    <button onclick="DemoApp.toggleSettingsButton(this);">Show Settings Button</button>
+    <button onclick="DemoApp.toggleMainButton(this);">Hide Main Button</button>
+    <button onclick="DemoApp.toggleSwipeBehavior(this);">Disable Vertical Swypes</button>
+    <input type="text" placeholder="Input text in regular input..." id="regular_field" />
+    <div
+        class="input"
+        contenteditable="true"
+        data-placeholder="Input text in contenteditable field..."
+        id="text_field"
+    ></div>
+    <div id="peer_wrap" style="display:none">
+        <img id="peer_photo" class="chat_img" src="">
+        <span id="peer_name"></span>
+    </div>
+    <div class="sect_row">Header: <input type="color" id="header_color_input" />
+        <select id="header_color_sel">
+            <option value="bg_color" selected>bg_color</option>
+            <option value="secondary_bg_color">secondary_bg_color</option>
+            <option value="custom" id="header_color_val">custom...</option>
+        </select>
+    </div>
+    <div class="sect_row">Background: <input type="color" id="bg_color_input" />
+        <select id="bg_color_sel">
+            <option value="bg_color" selected>bg_color</option>
+            <option value="secondary_bg_color">secondary_bg_color</option>
+            <option value="custom" id="bg_color_val">custom...</option>
+        </select>
+    </div>
+</section>
+</body>
+</html> 
+
